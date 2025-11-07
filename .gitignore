@@ -1,0 +1,40 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Extension packaging
+*.crx
+*.pem
+*.zip
+
+# Temporary files
+temp/
+tmp/
+
+# Node modules (if you add build tools later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+
+# Build output
+dist/
+build/
+
+# Test files
+test-*.html
+

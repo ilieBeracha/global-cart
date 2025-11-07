@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Universal Cart Tracker",
+  "version": "1.1.0",
+  "description": "Track items added to cart across all e-commerce sites in one global cart. Never lose track of what you want to buy!",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "downloads",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["utils/detector.js", "utils/storage.js", "content-script.js"],
+      "css": ["styles/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/test.png",
+      "48": "icons/test.png",
+      "128": "icons/test.png"
+    }
+  },
+  "icons": {
+    "16": "icons/test.png",
+    "48": "icons/test.png",
+    "128": "icons/test.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["styles/content.css", "styles/confirmation-modal.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+
